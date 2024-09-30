@@ -1,0 +1,76 @@
+/* Asegura que #root mantenga un tamaño consistente */
+#root {
+  max-width: 1280px; /* Ancho máximo */
+  width: 100%; /* El contenido ocupará el 100% del ancho permitido */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  padding: 2rem; /* Espaciado interno */
+  background-color: #282c34; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+  font-family: 'Arial', sans-serif; /* Tipografía clara */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+  min-height: 100vh; /* Asegura que el contenedor ocupe al menos el alto de la ventana */
+}
+
+/* Estilos del logotipo */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: transform 300ms, filter 300ms;
+}
+.logo:hover {
+  transform: scale(1.1); /* Efecto de elevación */
+  filter: drop-shadow(0 0 15px rgba(100, 108, 255, 0.7)); /* Sombra más prominente */
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 15px rgba(97, 218, 251, 0.7)); /* Sombra personalizada para React */
+}
+
+/* Animación de giro del logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Estilos de la tarjeta */
+.card {
+  padding: 2em;
+  background-color: #343a40; /* Fondo oscuro para las tarjetas */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #f8f9fa; /* Texto claro para mejor legibilidad */
+  transition: transform 300ms, box-shadow 300ms;
+}
+.card:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Sombra más intensa al hover */
+}
+
+/* Estilo del enlace */
+.read-the-docs {
+  color: #ffc107; /* Color amarillo para resaltar enlaces */
+  font-weight: bold;
+  transition: color 300ms, text-decoration 300ms;
+}
+.read-the-docs:hover {
+  color: #ffc107; /* Color amarillo al hover */
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.imagen-redondeada {
+  border-radius: 50%; /* Esto hará que la imagen sea redonda */
+  width: 50px; /* Asegúrate de que el ancho sea igual al alto */
+  height: 50px; /* Asegúrate de que el alto sea igual al ancho */
+  object-fit: cover; /* Esto asegurará que la imagen no se deforme */
+}
